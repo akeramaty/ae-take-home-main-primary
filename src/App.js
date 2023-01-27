@@ -24,12 +24,19 @@ function App() {
 
   // Function to add a Pokemon to the selected Pokemon list
   const addToDeck = (pokemon) => {
-    if (selectedPokemon.length < 5 && !selectedPokemon.includes(pokemon)) {
-      setSelectedPokemon([...selectedPokemon, pokemon]);
-    } else {
-      alert("item already in deck or deck is full");
+    if (selectedPokemon.length < 5) {
+        const isPokemonAlreadyInDeck = selectedPokemon.find(p => p.id === pokemon.id);
+        if (!isPokemonAlreadyInDeck) {
+            setSelectedPokemon([...selectedPokemon, pokemon]);
+        } else {
+            alert('Pokemon already in deck');
+        }
     }
-  }
+    else{
+      alert("too many pokemon in deck");
+    }
+}
+
   
   // Function to remove a Pokemon from the selected Pokemon list
   const removeFromDeck = (pokemon) => {

@@ -1,22 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PokemonCard from './PokemonCard';
 
 function PokemonDeck({selectedPokemon, removeFromDeck}) {
   // Initialize state for saved deck, which will be stored in local storage
-  const [savedDeck, setSavedDeck] = useState([]);
-
-  // Use effect to check for saved deck in local storage on mount
-  useEffect(() => {
-    // Retrieve saved deck from local storage
-    const savedDeck = JSON.parse(localStorage.getItem("savedPokemon"));
-    if (savedDeck) {
-      // If saved deck exists, set savedDeck state to saved deck
-      setSavedDeck(selectedPokemon);
-    } else {
-      // If no saved deck exists, set savedDeck state to selectedPokemon
-      setSavedDeck(selectedPokemon);
-    }
-  }, []);
+  const [setSavedDeck] = useState([]);
 
   // Function to handle saving the current selectedPokemon to local storage
   const handleSave = () => {

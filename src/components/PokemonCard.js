@@ -1,7 +1,7 @@
 import React from 'react';
 
 function PokemonCard({pokemon, addToDeck, onRemove, selectable, isPokemonDeck}) {
-    const { id, name, types, sprite } = pokemon;
+    const { name, types, sprite } = pokemon;
 
     return (
       <div className="card" onClick={selectable ? () => addToDeck(pokemon) : undefined}>
