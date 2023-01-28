@@ -30,6 +30,13 @@ hr {
   color: #000;
   padding: 5px;
   font-size: 20px;
+  float: right;
+  cursor: pointer;
+}
+.remove-btn:active {
+  transform: translateY(2px); /* Move button down slightly */
+  box-shadow: none; /* Remove shadow */
+  background-color: #ddd; /* Change background color */
 }
 .card {
   border: 1px solid #ccc; /* add a solid border */
@@ -38,6 +45,15 @@ hr {
  justify-content: center;
  align-items: center;
 
+
+}
+.pokedex-grid .card{
+  cursor: pointer;
+}
+.pokedex-grid .card:active {
+  transform: translateY(2px); /* Move button down slightly */
+  box-shadow: none; /* Remove shadow */
+  background-color: #ddd; /* Change background color */
 }
 .card img {
     display: block;
@@ -62,4 +78,34 @@ hr {
     padding-bottom: 10px;
     height: 45px;
   }
-  
+
+button.save-button { 
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 12px 20px; /* Some padding */
+  border-radius: 4px; /* Rounded corners */
+  border: none; /* Remove border */
+  text-align: center; /* Center-align text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Display as inline element */
+  font-size: 16px; /* Medium-sized font */
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Add subtle drop shadow */
+  margin: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.save-button:active {
+  transform: translateY(2px); /* Move button down slightly */
+  box-shadow: none; /* Remove shadow */
+  background-color: #ddd; /* Change background color */
+}
+
+button.save-button:hover {
+  background-color: #3e8e41;
+}
+
+
+
+
+
