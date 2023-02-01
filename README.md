@@ -1,3 +1,7 @@
+# Submission Info:
+- Technical design doc is in main directory saved as a PDF. 
+- No change to the commands below to execute the app.
+
 # AudioEye Take-Home Challenge
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
